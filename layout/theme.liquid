@@ -16,7 +16,7 @@
 
   <header>
     <nav class="header__nav">
-      <div>
+      <div class="header__nav-left">
         {% for link in linklists.main-menu.links %}
           {% assign child_list_handle = link.title | handleize %}
           {% if linklists[child_list_handle].links != blank %}
@@ -30,7 +30,7 @@
         {% endfor %}
       </div>
 
-      <div>
+      <div class="header__nav-right">
         {% if shop.customer_accounts_enabled %}
           {% if customer %}
             <a href="/account">account</a>
@@ -41,7 +41,12 @@
           {% endif %}
         {% endif %}
 
-        <a href="/cart">cart</a>
+        <div class="header__cart-btn">
+          <a href="/cart">
+            <img src="{{ 'cart-icon.svg' | asset_url }}" alt="cart" />
+            <span>{{ cart.item_count }}</span>
+          </a>
+        </div>
       </div>
     </nav>
   </header>
