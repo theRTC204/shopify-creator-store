@@ -1,1 +1,204 @@
 // put your styles here
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+html {
+    background: #0b0911;
+}
+
+body {
+    background: #1B172D;
+    font-family: Poppins;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFF;
+    max-width: 1366px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+a {
+    color: #52CCDE
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 100px;
+    line-height: 40px;
+}
+
+.hero__banner {
+    background-size: cover;
+    background-position: top;
+    height: 300px;
+    width: 100%;
+}
+
+.profile {
+    user-select: none;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: -90px 0px 0px 100px
+}
+
+.profile__avatar {
+    background-color: #FFF;
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    border: 5px solid #463D6D;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.17);
+    overflow: hidden;
+}
+
+.profile__avatar img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.profile__details {
+    margin: 0px 0px 60px 16px;
+}
+
+.profile__name {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile__name span {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile__name img {
+    margin: 0px 0px 0px 12px;
+}
+
+.profile__stats span {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 12px;
+}
+
+.main {
+    padding: 60px 80px;
+}
+
+.collection--empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 680px;
+    background-color: rgba(46, 39, 76, 0.5);
+    border-radius: 3px;
+    user-select: none;
+}
+
+.collection--empty span {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #463D6D;
+}
+
+.product-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 276px;
+    height: 370px;
+    background-color: #2E274C;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.product-item img {
+    position: relative;
+    background-color: #EEE;
+    min-width: 276px;
+    min-height: 276px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-item__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-item__details a {
+    color: white;
+    text-decoration: none;
+}
+
+.product-item__details span {
+    opacity: 0.5;
+}
+
+.product-item__options {
+    display: flex;
+}
+
+.product-item__options span:first-child:nth-last-child(2n)::after {
+    margin: 0px 5px;
+    content: "•";
+}
+
+.product__hero {
+    height: 668px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+}
+
+.product__carousel {
+    height: 100%;
+}
+
+.product__carousel img {
+    height: 100%;
+}
+
+.product__form {
+    
+}
