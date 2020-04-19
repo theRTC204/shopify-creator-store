@@ -16,6 +16,22 @@ h4 {
     line-height: 24px;
 }
 
+a {
+    color: #52CCDE
+}
+
+button {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: inherit;
+    border: 0;
+    padding: 12px 14px;
+    height: 40px;
+    background: #52CCDE;
+    border-radius: 20px;
+}
+
 html {
     background: #0b0911;
 }
@@ -29,10 +45,6 @@ body {
     max-width: 1366px;
     min-height: 100vh;
     margin: auto;
-}
-
-a {
-    color: #52CCDE
 }
 
 .header__nav {
