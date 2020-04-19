@@ -14,7 +14,7 @@
   </div>
   <div class="product__form">
     <h1>{{ product.title }}</h1>
-    {{ current_variant.price | money }}
+    <span class="price">{{ current_variant.price | money }}</span>
     <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
       <select name="id" id="productSelect">
         {% for variant in product.variants %}
