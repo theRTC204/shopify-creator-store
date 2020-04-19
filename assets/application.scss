@@ -282,6 +282,31 @@ body {
     height: 100%;
 }
 
-.product__form {
-    
+.product__form form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.product__form h1 {
+    font-size: 42px;
+    line-height: 50px;
+}
+
+.product__form .price {
+    font-size: 32px;
+    line-height: 48px;
+    color: #52CCDE;
+}
+
+.product__form .add-to-cart {
+    width: 200px;
+}
+
+.product__meta {
+
+}
+
+.product__meta .meta__breadcrumb .profile {
+    position: relative;
 }
