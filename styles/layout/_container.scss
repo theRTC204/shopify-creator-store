@@ -1,0 +1,14 @@
+.container {
+  flex: 1;
+
+  &__item {
+    &--flex {
+      flex: 1;
+
+      &:last-child {
+        flex: 1 0 25%;
+        max-width: 500px;
+      }
+    }
+  }
+}

@@ -1,51 +1,16 @@
 // put your styles here
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-weight: 600;
-}
+@import 'global/root';
+@import 'global/type';
 
-h1 {
-    font-size: 32px;
-    line-height: 48px;
-}
+@import 'layout/container';
 
-h4 {
-    font-size: 16px;
-    line-height: 24px;
-}
+@import 'modules/profile';
+@import 'modules/product';
 
-a {
-    color: #52CCDE
-}
-
-button {
-    color: #FFF;
-    font-weight: 600;
-    font-size: 12px;
-    font-family: inherit;
-    border: 0;
-    padding: 12px 14px;
-    height: 40px;
-    background: #52CCDE;
-    border-radius: 20px;
-}
-
-html {
-    background: #0b0911;
-}
-
-body {
-    background: #1B172D;
-    font-family: Poppins;
-    font-size: 12px;
-    line-height: 18px;
-    color: #FFF;
-    max-width: 1366px;
-    min-height: 100vh;
-    margin: auto;
-}
+@import 'components/button';
+@import 'components/carousel';
 
 .header__nav {
     display: flex;
@@ -95,88 +60,6 @@ body {
         height: 300px;
         padding-top: 0;
     }
-}
-
-.profile {
-    user-select: none;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: -42px 0px 0px;
-    width: 100%;
-}
-
-@media screen and (min-width: 1440px) {
-    .profile {
-        flex-direction: row;
-        margin: -90px 0px 0px 100px;
-        width: inherit;
-    }
-}
-
-.profile__avatar {
-    background-color: #FFF;
-    width: 84px;
-    height: 84px;
-    min-width: 84px;
-    min-height: 84px;
-    border-radius: 50%;
-    border: 3px solid #463D6D;
-    box-sizing: border-box;
-    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.17);
-    overflow: hidden;
-}
-
-@media screen and (min-width: 1440px) {
-    .profile__avatar {
-        width: 150px;
-        height: 150px;
-        min-width: 150px;
-        min-height: 150px;
-        border: 5px solid #463D6D;
-    }
-}
-
-.profile__avatar img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.profile__details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media screen and (min-width: 1440px) {
-    .profile__details {
-        align-items: flex-start;
-        margin: 0px 0px 60px 16px;
-    }
-}
-.profile__name {
-    display: flex;
-    flex-direction: row;
-}
-
-.profile__name span {
-    font-size: 32px;
-    line-height: 48px;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.profile__name img {
-    margin: 0px 0px 0px 12px;
-}
-
-.profile__stats span {
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 12px;
 }
 
 .main {
@@ -274,14 +157,6 @@ body {
     color: #444;
 }
 
-.product__carousel {
-    height: 100%;
-}
-
-.product__carousel img {
-    height: 100%;
-}
-
 .product__form form {
     display: flex;
     flex-direction: column;
@@ -301,12 +176,4 @@ body {
 
 .product__form .add-to-cart {
     width: 200px;
-}
-
-.product__meta {
-
-}
-
-.product__meta .meta__breadcrumb .profile {
-    position: relative;
 }
