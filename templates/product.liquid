@@ -1,62 +1,81 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
 {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
 
-<div class="product__hero">
-  <div class="product__carousel">
-    <img src="{{ featured_image | img_url: 'original' }}" alt="{{ featured_image.alt | escape }}" id="ProductPhotoImg">
-    {% comment %}
-    {% for image in product.images %}
-      <a href="{{ image.src | img_url: 'large' }}">
-        <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
-      </a>
-    {% endfor %}
-    {% endcomment %}
-  </div>
-  <div class="product__form">
-    <h1>{{ product.title }}</h1>
-    <span class="price">{{ current_variant.price | money }}</span>
-    <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
-      <select name="id" id="productSelect">
-        {% for variant in product.variants %}
-          {% if variant.available %}
-            <option value="{{ variant.id }}">
-              {{ variant.title }} - {{ variant.price | money_with_currency }}
-            </option>
-          {% else %}
-            <option disabled="disabled">
-              {{ variant.title }} - sold out
-            </option>
-          {% endif %}
+<div class="product">
+  <div class="container product__hero">
+    <div class="container__item--flex">
+      <div class="carousel">
+        <img src="{{ featured_image | img_url: 'original' }}" alt="{{ featured_image.alt | escape }}" id="ProductPhotoImg">
+        {% comment %}
+        {% for image in product.images %}
+          <a href="{{ image.src | img_url: 'large' }}">
+            <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
+          </a>
         {% endfor %}
-      </select>
-      <label for="Quantity">quantity</label>
-      <input type="number" id="Quantity" name="quantity" value="1" min="1">
-      <button type="submit" name="add" id="AddToCart" class="add-to-cart">Add to cart</button>
-    </form>
-  </div>
-</div>
-<div class="product__meta">
-  <div>Brand</div>
-  <div>Stocked in</div>
-  <div class="">Fulfillment time</div>
-  <div class="meta__breadcrumb">
-    <div class="profile">
-      <div class="profile__avatar">
-        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/8079a92f-c2b1-4ec8-9a2d-97391f50201c-profile_image-300x300.png" alt="darkosto" />
+        {% endcomment %}
       </div>
-      <div class="profile__details">
-        <div class="profile__name">
-          <span>darkosto</span>
-          <img src="{{ 'verified-badge.svg' | asset_url }}" alt="Verified User" />
+    </div>
+    <div class="container__item--flex">
+      <div class="product__form">
+        <h1>{{ product.title }}</h1>
+        <span class="price">{{ current_variant.price | money }}</span>
+        <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+          <select name="id" id="productSelect">
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                <option value="{{ variant.id }}">
+                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+                </option>
+              {% else %}
+                <option disabled="disabled">
+                  {{ variant.title }} - sold out
+                </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+          <label for="Quantity">quantity</label>
+          <input type="number" id="Quantity" name="quantity" value="1" min="1">
+          <button type="submit" name="add" id="AddToCart" class="add-to-cart">Add to cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container product__meta">
+    <div class="container__item--flex meta">
+      <h4>Brand</h4>
+      <span>{{ product.metafields.printful.brand }}</span>
+    </div>
+    <div class="container__item--flex meta">
+      <h4>Stocked in</h4>
+      <span>{% assign stocked_in = product.metafields.printful.stocked_in %}{{ stocked_in.countries | join: ' &bull; ' }}</span>
+    </div>
+    <div class="container__item--flex meta">
+      <h4>Fulfillment time</h4>
+      <span>{% assign times = product.metafields.printful.fulfillment_time %}{{ times.low }}-{{ times.high }} business days</span>
+    </div>
+    <div class="container__item--flex">
+      <div class="profile">
+        <div class="profile__avatar">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/8079a92f-c2b1-4ec8-9a2d-97391f50201c-profile_image-300x300.png" alt="darkosto" />
         </div>
-        <div class="profile__stats">
-          <span>69,915 followers</span>
-          <span>5,870,824 views</span>
+        <div class="profile__details">
+          <div class="profile__name">
+            <span>darkosto</span>
+            <img src="{{ 'verified-badge.svg' | asset_url }}" alt="Verified User" />
+          </div>
+          <div class="profile__stats">
+            <a href="{{ collection.url | within: collection }}">Return to products</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="product__description">
-  <div>{{ product.description }}</div>
+  <div class="container product__description">
+    <div class="container__item--flex">
+      <h1>Product description</h1>
+      <div>{{ product.description }}</div>
+    </div>
+    <div class="container__item--flex">
+    </div>
+  </div>
 </div>
