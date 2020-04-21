@@ -1,5 +1,4 @@
 .header {
-
   &__nav {
     display: flex;
     flex-direction: row;
@@ -12,6 +11,10 @@
         padding: 15px 100px;
       }
     }
+    
+    a {
+      margin: 0 8px;
+    }
   }
 
   &__cart-btn {
@@ -19,20 +22,18 @@
     border-radius: 20px;
     background-color: #52CCDE;
 
-    & a {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 21px;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
 
     & img {
-        margin-right: 8px;
+      margin-right: 8px;
     }
   }
 }

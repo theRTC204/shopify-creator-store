@@ -13,6 +13,10 @@
 @import 'components/button';
 @import 'components/carousel';
 
+.flex__spacer {
+    flex: 1;
+}
+
 .hero__banner {
     background-size: cover;
     background-position: top;

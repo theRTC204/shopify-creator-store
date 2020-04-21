@@ -62,12 +62,13 @@ a {
     padding: 15px 100px;
   }
 }
+.header__nav a {
+  margin: 0 8px;
+}
 .header__cart-btn {
   padding: 10px 14px;
   border-radius: 20px;
   background-color: #52CCDE;
-}
-.header__cart-btn a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -247,8 +248,8 @@ a {
   margin: 0px 0px 0px 8px;
 }
 .product__meta .profile__stats a {
-  -webkit-user-select: all;
-          user-select: all;
+  -webkit-user-select: auto;
+          user-select: auto;
 }
 .product__description {
   font-size: 14px;
@@ -282,6 +283,10 @@ button {
 }
 .carousel img {
   max-height: 100%;
+}
+
+.flex__spacer {
+  flex: 1;
 }
 
 .hero__banner {
