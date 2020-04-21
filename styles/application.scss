@@ -148,13 +148,17 @@
 }
 
 .product__hero {
-    height: 668px;
-    background-color: #FFF;
+    background-color: #EEE;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #444;
+
+    @media screen and (min-width: 1440px) {
+        height: 668px;
+        flex-direction: row;
+    }
 }
 
 .product__form form {

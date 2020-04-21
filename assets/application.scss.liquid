@@ -129,19 +129,35 @@ a {
   max-width: 500px;
 }
 .product .carousel img {
-  max-width: 668px;
+  max-width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  .product .carousel img {
+    max-width: 668px;
+  }
 }
 .product__meta, .product__description {
-  padding-left: 100px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (min-width: 1440px) {
+  .product__meta, .product__description {
+    padding-left: 100px;
+    flex-direction: row;
+  }
+}
 .product__meta .container__item--flex:last-child, .product__description .container__item--flex:last-child {
-  border-left: 2px solid #463D6D;
   box-sizing: border-box;
 }
+@media screen and (min-width: 1440px) {
+  .product__meta .container__item--flex:last-child, .product__description .container__item--flex:last-child {
+    border-left: 2px solid #463D6D;
+  }
+}
 .product__meta {
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: #272141;
 }
 .product__meta h4 {
@@ -152,6 +168,8 @@ a {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  padding: 10px;
+  white-space: nowrap;
 }
 .product__meta .container__item--flex.meta span {
   opacity: 0.5;
@@ -167,8 +185,12 @@ a {
   height: 58px;
   min-width: 58px;
   min-height: 58px;
-  margin: 20px 0 20px 20px;
   border-width: 2px;
+}
+@media screen and (min-width: 1440px) {
+  .product__meta .profile__avatar {
+    margin: 20px 0 20px 20px;
+  }
 }
 .product__meta .profile__details {
   display: flex;
@@ -201,7 +223,12 @@ a {
   line-height: 24px;
 }
 .product__description .container__item--flex:first-child {
-  padding: 40px 60px 40px 0;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 1440px) {
+  .product__description .container__item--flex:first-child {
+    padding: 40px 60px 40px 0;
+  }
 }
 
 button {
@@ -359,13 +386,18 @@ button {
 }
 
 .product__hero {
-  height: 668px;
-  background-color: #FFF;
+  background-color: #EEE;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #444;
+}
+@media screen and (min-width: 1440px) {
+  .product__hero {
+    height: 668px;
+    flex-direction: row;
+  }
 }
 
 .product__form form {
