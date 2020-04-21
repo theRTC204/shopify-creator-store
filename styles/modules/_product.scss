@@ -119,11 +119,41 @@
 
     .container__item--flex:first-child {
       padding: 10px 20px;
+
+      @media screen and (min-width: 1440px) {
+        & {
+          padding: 40px 60px 40px 0;
+        }
+      }
     }
 
-    @media screen and (min-width: 1440px) {
-      .container__item--flex:first-child {
-        padding: 40px 60px 40px 0;
+    .container__item--flex:last-child {
+      padding: 10px 20px;
+
+      @media screen and (min-width: 1440px) {
+        & {
+          padding: 30px 10px;
+        }
+      }
+    }
+
+    .care {
+      h4 {
+        margin: 10px;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px;
+          min-width: 30px;
+        }
       }
     }
   }
