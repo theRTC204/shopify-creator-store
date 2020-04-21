@@ -64,7 +64,11 @@
             <img src="{{ 'verified-badge.svg' | asset_url }}" alt="Verified User" />
           </div>
           <div class="profile__stats">
-            <a href="{{ collection.url | within: collection }}">Return to products</a>
+            {% if collection.url %}
+              <a href="{{ collection.url }}">Return to {{ collection.title | downcase }} </a>
+            {% else %}
+              <a href="/collections/all">Return to products</a>
+            {% endif %}
           </div>
         </div>
       </div>
