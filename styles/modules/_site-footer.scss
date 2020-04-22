@@ -1,0 +1,10 @@
+.site-footer {
+  display: flex;
+  justify-content: flex-start;
+
+  &__copyright {
+    font-size: 12px;
+    line-height: 18px;
+    opacity: 0.5;
+  }
+}
