@@ -58,6 +58,11 @@
       line-height: 50px;
     }
 
+    input:not([type="submit"]), select {
+      background: #FFF;
+      color: #444;
+    }
+
     .price {
       font-size: 32px;
       line-height: 48px;
@@ -66,6 +71,12 @@
 
     .add-to-cart {
       width: 200px;
+    }
+
+    .selector-wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 120px;
     }
   }
 

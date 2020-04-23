@@ -200,6 +200,10 @@ a {
   font-size: 42px;
   line-height: 50px;
 }
+.product__form input:not([type=submit]), .product__form select {
+  background: #FFF;
+  color: #444;
+}
 .product__form .price {
   font-size: 32px;
   line-height: 48px;
@@ -207,6 +211,11 @@ a {
 }
 .product__form .add-to-cart {
   width: 200px;
+}
+.product__form .selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 120px;
 }
 .product__meta {
   flex-direction: row;
@@ -338,7 +347,10 @@ a {
   opacity: 0.5;
 }
 
-.button {
+button,
+[type=button],
+[type=reset],
+[type=submit] {
   color: #FFF;
   font-weight: 600;
   font-size: 12px;
@@ -348,6 +360,7 @@ a {
   height: 40px;
   background: #52CCDE;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .carousel {
@@ -359,32 +372,27 @@ a {
   max-height: 100%;
 }
 
-.selector-wrapper {
-  display: flex;
-  flex-direction: column;
+input, text, select {
   margin-bottom: 20px;
-  max-width: 120px;
+  background: #2E274C;
+  border: 1px solid rgba(68, 68, 68, 0.2);
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 8px 14px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 165%;
+  height: 40px;
 }
-.selector-wrapper label {
+
+label {
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 8px;
 }
-.selector-wrapper label:after {
+label:after {
   content: ":";
-}
-
-.single-option-selector, .quantity {
-  background: #FFFFFF;
-  border: 1px solid rgba(68, 68, 68, 0.2);
-  box-sizing: border-box;
-  border-radius: 3px;
-  padding: 8px 14px;
-  color: #444;
-  font-size: 14px;
-  line-height: 165%;
-  height: 40px;
 }
 
 .flex__spacer {

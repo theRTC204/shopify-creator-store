@@ -1,4 +1,7 @@
-.button {
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
   color: #FFF;
   font-weight: 600;
   font-size: 12px;
@@ -8,4 +11,5 @@
   height: 40px;
   background: #52CCDE;
   border-radius: 20px;
+  cursor: pointer;
 }
