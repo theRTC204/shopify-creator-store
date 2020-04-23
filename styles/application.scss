@@ -116,38 +116,3 @@
     margin: 0px 5px;
     content: "•";
 }
-
-.product__hero {
-    background-color: #EEE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #444;
-
-    @media screen and (min-width: 1440px) {
-        height: 668px;
-        flex-direction: row;
-    }
-}
-
-.product__form form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-}
-
-.product__form h1 {
-    font-size: 42px;
-    line-height: 50px;
-}
-
-.product__form .price {
-    font-size: 32px;
-    line-height: 48px;
-    color: #52CCDE;
-}
-
-.product__form .add-to-cart {
-    width: 200px;
-}

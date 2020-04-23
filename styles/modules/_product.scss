@@ -27,15 +27,46 @@
       padding-left: 100px;
       flex-direction: row;
     }
+  }
 
-    .container__item--flex:last-child {
-      box-sizing: border-box;
+  &__hero {
+    background-color: #EEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #444;
 
-      @media screen and (min-width: 1440px) {
-        border-left: 2px solid #463D6D;
-      }
+    @media screen and (min-width: 1440px) {
+      height: 668px;
+      flex-direction: row;
     }
   }
+
+
+  &__form {
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    .price {
+      font-size: 32px;
+      line-height: 48px;
+      color: #52CCDE;
+    }
+
+    .add-to-cart {
+      width: 200px;
+    }
+  }
+
 
   &__meta {
     flex-direction: row;
