@@ -79,8 +79,10 @@
       <h1>Product description</h1>
       <div>{{ product.description }}</div>
     </div>
+    {% if product.metafields.printful.care %}
     <div class="container__item--flex">
       {% include 'product-care-instructions' with product %}
     </div>
+    {% endif %}
   </div>
 </div>

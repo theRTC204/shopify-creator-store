@@ -1,11 +1,4 @@
 .product {
-  .container__item--flex {
-    &:last-child {
-      flex: 1 0 25%;
-      max-width: 500px;
-    }
-  }
-
   .carousel {
     img {
       max-width: 100%;
@@ -14,6 +7,15 @@
         & {
           max-width: 668px;
         }
+      }
+    }
+  }
+
+  &__hero, &__meta {
+    .container__item--flex {
+      &:last-child {
+        flex: 1 0 25%;
+        max-width: 500px;
       }
     }
   }
@@ -85,6 +87,14 @@
       flex-direction: column;
       padding: 10px;
       white-space: nowrap;
+
+      &:last-child {
+        box-sizing: border-box;
+
+        @media screen and (min-width: 1440px) {
+          border-left: 2px solid #463D6D;
+        }
+      }
  
       &.meta span {
         opacity: 0.5;
@@ -160,11 +170,24 @@
 
     .container__item--flex:last-child {
       padding: 10px 20px;
+      box-sizing: border-box;
+      max-width: 500px;
+      margin-right: 0;
 
       @media screen and (min-width: 1440px) {
         & {
           padding: 30px 10px;
+          border-left: 2px solid #463D6D;
         }
+      }
+    }
+
+    .container__item--flex:first-child:last-child {
+      max-width: 100%;
+      margin-right: 100px;
+
+      @media screen and (min-width: 1440px) {
+        border-left: none;
       }
     }
 
