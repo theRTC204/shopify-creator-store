@@ -338,7 +338,7 @@ a {
   opacity: 0.5;
 }
 
-button {
+.button {
   color: #FFF;
   font-weight: 600;
   font-size: 12px;
@@ -357,6 +357,33 @@ button {
 }
 .carousel img {
   max-height: 100%;
+}
+
+.selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-width: 120px;
+}
+.selector-wrapper label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 8px;
+}
+.selector-wrapper label:after {
+  content: ":";
+}
+
+.single-option-selector, .quantity {
+  background: #FFFFFF;
+  border: 1px solid rgba(68, 68, 68, 0.2);
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 5px 14px;
+  color: #444;
+  font-size: 14px;
+  line-height: 165%;
 }
 
 .flex__spacer {
