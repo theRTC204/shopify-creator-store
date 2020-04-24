@@ -34,17 +34,17 @@
       {% if shop.customer_accounts_enabled %}
         {% if customer %}
           {%- if customer.metafields.custom.twitch_id -%}<span class="header__account-name">{{ customer.metafields.custom.twitch_id }}</span>{%- endif -%}
-          <a class="header__account-btn" href="/account">
+          <a class="header__account-btn" href="{{ routes.account_url }}">
             <img src="{{ 'icon-account.svg' | asset_url }}" alt="account" />
           </a>
         {% else %}
-          <a class="header__account-btn" href="/account/login" alt="login">
+          <a class="header__account-btn" href="{{ routes.account_login_url }}" alt="login">
             <img src="{{ 'icon-account.svg' | asset_url }}" alt="login" />
           </a>
         {% endif %}
       {% endif %}
 
-      <a class="header__cart-btn" href="/cart">
+      <a class="header__cart-btn" href="{{ routes.cart_url }}">
         <img src="{{ 'cart-icon.svg' | asset_url }}" alt="cart" />
         <span>{{ cart.item_count }}</span>
       </a>
