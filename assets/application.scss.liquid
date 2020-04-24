@@ -415,10 +415,14 @@ label:after {
 }
 
 form#create_customer {
-  display: flex;
-  flex: 1 0;
-  justify-content: center;
-  align-items: stretch;
+  padding: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+@media screen and (min-width: 1440px) {
+  form#create_customer {
+    padding: 0;
+  }
 }
 
 .hero__banner {
@@ -435,7 +439,7 @@ form#create_customer {
   }
 }
 .main {
-  margin-top: 110px;
+  margin-top: 120px;
 }
 
 @media screen and (min-width: 1440px) {
