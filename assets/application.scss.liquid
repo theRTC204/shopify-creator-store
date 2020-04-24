@@ -86,6 +86,15 @@ a {
   margin-right: 8px;
 }
 
+.customer__form {
+  display: flex;
+  flex-direction: column;
+}
+.customer__form input[type=submit] {
+  align-self: center;
+  width: 120px;
+}
+
 .profile {
   -webkit-user-select: none;
           user-select: none;
@@ -402,6 +411,13 @@ label:after {
 
 .flex__spacer {
   flex: 1;
+}
+
+form#create_customer {
+  display: flex;
+  flex: 1 0;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .hero__banner {

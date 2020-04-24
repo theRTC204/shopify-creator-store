@@ -1,0 +1,11 @@
+.customer {
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    input[type="submit"] {
+      align-self: center;
+      width: 120px;
+    }
+  }
+}
