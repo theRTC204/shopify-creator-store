@@ -33,11 +33,14 @@
 
       {% if shop.customer_accounts_enabled %}
         {% if customer %}
-          <a href="/account">account</a>
-          {{ 'log out'  | customer_logout_link }}
+          {%- if customer.metafields.custom.twitch_id -%}<span class="header__account-name">{{ customer.metafields.custom.twitch_id }}</span>{%- endif -%}
+          <a class="header__account-btn" href="/account">
+            <img src="{{ 'icon-account.svg' | asset_url }}" alt="account" />
+          </a>
         {% else %}
-          {{ 'log in' | customer_login_link }}
-          {{ 'register' | customer_register_link }}
+          <a class="header__account-btn" href="/account/login" alt="login">
+            <img src="{{ 'icon-account.svg' | asset_url }}" alt="login" />
+          </a>
         {% endif %}
       {% endif %}
 

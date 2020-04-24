@@ -36,4 +36,19 @@
       margin-right: 8px;
     }
   }
+
+  &__account {
+    &-name {
+      font-size: 14px;
+      user-select: none;
+      margin-right: 2px;
+    }
+
+    &-btn {
+      padding: 10px;
+      border-radius: 20px;
+      background-color: #8C52DE;
+      display: flex;
+    }
+  }
 }
