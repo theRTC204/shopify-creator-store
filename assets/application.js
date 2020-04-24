@@ -15,15 +15,26 @@ var selectCallback = function(variant, selector) {
   return;
 }
 
-var init = function(evt) {
-  console.debug('DEBUG', 'DOMContentLoaded', evt);
-  if (window.Shopify) {
-    const productJson = JSON.parse(
-      document.getElementById('ProductJson').innerHTML
-    );
+var registerSingleOptionSelector = function() {
+   if (window.Shopify) {
+    const productJson = getProductJson();
 
-    new Shopify.OptionSelectors('OptionSelector', { product: productJson, onVariantSelected: selectCallback, enableHistoryState: true })
+    if (productJson) {
+      new Shopify.OptionSelectors('OptionSelector', { product: productJson, onVariantSelected: selectCallback, enableHistoryState: true })
+    }
   }
+}
+
+var getProductJson = function() {
+  var el = document.getElementById('ProductJson');
+  if (el) {
+    return JSON.parse(el.innerHTML);
+  }
+  return null;
+}
+
+var init = function(evt) {
+  registerSingleOptionSelector();
 }
 
 window.addEventListener('DOMContentLoaded', init);
