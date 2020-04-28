@@ -1,1 +1,18 @@
 <!-- /templates/customers/login.liquid -->
+{% section 'hero' %}
+<section class="main">
+  {% form 'customer_login' %} {{ form.errors | default_errors }}
+  <div class="customer__form">
+    <label for="customer_email">Email address</label>
+    <input id="customer_email" type="email" name="customer[email]" />
+
+    <label for="customer_password">Password</label>
+    <input id="customer_password" type="password" name="customer[password]" />
+
+    <input type="submit" value="Sign In" />
+  </div>
+  {% endform %}
+  <div class="customer__register">
+    <span>Don't have an account? <a href="{{ routes.account_register_url }}">Sign up now!</a></span>
+  </div>
+</section>
