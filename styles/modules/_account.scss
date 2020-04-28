@@ -1,0 +1,22 @@
+.account {
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__orders {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  &__customer {
+  }
+}

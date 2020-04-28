@@ -70,6 +70,22 @@ a {
   flex: 1;
 }
 
+.account__heading {
+  margin-bottom: 20px;
+}
+.account__details {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .account__details {
+    flex-direction: row;
+  }
+}
+.account__orders {
+  flex: 1;
+  margin-bottom: 20px;
+}
 .cart__container {
   display: flex;
   flex-direction: column;
@@ -543,6 +559,7 @@ form#create_customer, form#customer_login {
 }
 .main {
   margin: 120px 0 40px 0;
+  padding: 10px 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -577,7 +594,6 @@ form#create_customer, form#customer_login {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 10px;
 }
 
 .product-item {
