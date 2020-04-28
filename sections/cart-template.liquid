@@ -1,0 +1,49 @@
+<section class="main">
+{% if cart.item_count > 0 %}
+  <div class="cart__container">
+    <h1>Your cart</h1>
+    <form action="/cart" method="post" novalidate>
+      {% for item in cart.items %}
+        <div class="item__container">
+          <div class="item__image">
+            <a href="{{ item.url | within: collections.all }}">
+              <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+            </a>
+          </div>
+          <div class="item__details">
+            <h4>{{ item.product.title }}</h4>
+            <span>{{ item.variant.title }}</span>
+            <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">Remove</a>
+          </div>
+          <div class="item__quantity">
+            <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
+          </div>
+          <div class="item__price">
+            {% if item.original_line_price != item.line_price %}<del>{{ item.original_line_price | money }}<del>{% endif %}
+            <span>{{ item.line_price | money }}</span>
+            {% for discount in item.discounts %}<span>{{ discount.title }}<span>{% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+      <div class="cart__summary">
+        <h4>Subtotal: {{ cart.total_price | money }}</h4>
+        <div>
+          <button type="submit" name="update">Update</button>
+          <button type="submit" name="checkout">Checkout</button>
+        </div>
+      </div>
+    </form>
+  </div>
+{% else %}
+  <div class="cart__container cart__container--empty">
+    <h1>Your cart</h1>
+    <p>Your cart is currently empty.</p>
+    {% comment %}
+    <div>
+      <p>Enable cookies to use the shopping cart</p>
+    </div>
+    {% endcomment %}
+    <a href="{{ routes.root_url }}" class="btn">Continue shopping</a>
+  </div>
+{% endif %}
+</section>
