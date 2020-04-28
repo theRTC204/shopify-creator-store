@@ -11,6 +11,10 @@
     form {
       width: 90%;
 
+      @media screen and (min-width: 425px) {
+        width: 80%;
+      }
+
       @media screen and (min-width: 1440px) {
         width: 60%;
       }
@@ -23,12 +27,16 @@
       }
 
       &__image {
+        display: none;
         height: 120px;
+
+        @media screen and (min-width: 375px) {
+          display: block;
+        }
       }
 
       &__details {
         flex: 1;
-        max-width: 420px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -39,7 +47,7 @@
         display: none;
         padding: 10px;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 768px) {
           display: block;
         }
 
@@ -49,6 +57,8 @@
       }
       
       &__price {
+        min-width: 60px;
+        text-align: right;
         padding: 10px 0;
       }
     }
