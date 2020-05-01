@@ -89,6 +89,7 @@
 
     h4 {
       line-height: 20px;
+      margin-bottom: 0;
     }
 
     .container__item--flex {
@@ -168,6 +169,10 @@
   &__description {
     font-size: 14px;
     line-height: 24px;
+
+    h1 {
+      margin-bottom: 10px;
+    }
 
     .container__item--flex:first-child {
       padding: 10px 20px;
