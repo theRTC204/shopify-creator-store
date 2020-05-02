@@ -12,10 +12,6 @@
     }
   }
 
-  &__heading {
-    margin-bottom: 20px;
-  }
-
   &__details {
     display: flex;
     flex-direction: column;
@@ -24,8 +20,5 @@
   &__orders, &__order-history {
     flex: 1;
     margin-bottom: 20px;
-  }
-
-  &__customer {
   }
 }

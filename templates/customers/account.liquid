@@ -1,11 +1,12 @@
 <!-- /templates/customers/account.liquid -->
 {% section 'hero' %}
 <section class="main">
-  <div class="account__heading">
+  <div class="section-header">
     <h1>My account</h1>
     <a href="{{ routes.account_logout_url }}">Log out</a>
   </div>
-  <div class="account__details">
+
+  <div class="account">
     <div class="account__orders">
       <h2>Order history</h2>
       {% paginate customer.orders by 20 %}
