@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  @media screen and (min-width: 1024px) {
+    margin: -8px -16px;
+  }
+
   & .grid-item {
     height: 370px;
   }
