@@ -1,14 +1,12 @@
-<div class="product-item">
-  <a href="{{ product.url | within: collection }}">
-  <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
-  </a>
-  <div class="product-item__details">
-  <a href="{{ product.url | within: collection }}"><h4>{{ product.title }}</h4></a>
-  <div class="product-item__options">
-    {% if product.type != blank %}<span>{{ product.type }}</span>{% endif %}
-    <span>XS - 4XL</span>
-  </div>
-  <span class="money">{{ product.price | money }}</span>
-  <span>{% unless product.available %}<strong>sold out</strong>{% endunless %}</span>
+<div class="grid-item">
+  <a class="grid-item__image" href="{{ product.url | within: collection }}" style="background-image: url({{ product.featured_image.src | img_url: 'large' }});"></a>
+  <div class="grid-item__details">
+    <a href="{{ product.url | within: collection }}"><h4>{{ product.title }}</h4></a>
+    <div class="grid-item__options">
+      {% if product.type != blank %}<span>{{ product.type }}</span>{% endif %}
+      <span>XS - 4XL</span>
+    </div>
+    <span class="money">{{ product.price | money }}</span>
+    <span>{% unless product.available %}<strong>sold out</strong>{% endunless %}</span>
   </div>
 </div>

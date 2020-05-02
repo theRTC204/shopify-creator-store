@@ -1,0 +1,10 @@
+.product-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & .grid-item {
+    height: 370px;
+  }
+}
