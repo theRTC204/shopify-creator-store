@@ -1,1 +1,80 @@
 <!-- /templates/customers/order.liquid -->
+{% section 'hero' %}
+<section class="main">
+  <div class="section-header">
+    <h1>My account</h1>
+    <p><a href="{{ routes.account_url }}">Return to Account Details</a></p>
+  </div>
+
+  <div class="account">
+    <div class="account__order-history">
+      <h2>Order {{ order.name }}</h2>
+
+      {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
+      <p>Placed on {{ order_date }}</p>
+
+      {% if order.cancelled %}
+        <div class="order--cancelled">
+          {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
+          <p>Order Cancelled on {{ cancelled_at }}</p>
+          <p>Reason: {{ order.cancel_reason_label }}</p>
+        </div>
+      {% endif %}
+
+      <table>
+        <thead>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </thead>
+        <tbody>
+          {% for line_item in order.line_items %}
+            <tr id="{{ line_item.key }}">
+              <th class="order-table__product">
+                <div>
+                  {{ line_item.title | link_to: line_item.product.url }}
+                </div>
+                {%- if line_item.fulfillment -%}
+                  <div class="note">
+                    {%- assign created_at = line_item.fulfillment.created_at | time_tag: format: 'date' -%}
+                    Fulfilled {{ created_at }}
+                    <div>
+                      {%- if line_item.fulfillment.tracking_url -%}
+                        <a href="{{ line_item.fulfillment.tracking_url }}">
+                          Track shipment
+                        </a>
+                      {%- endif -%}
+                      <div>
+                        {{ line_item.fulfillment.tracking_company }}
+                        {%- if line_item.fulfillment.tracking_number -%} #{{ line_item.fulfillment.tracking_number }}{%- endif -%}
+                      </div>
+                    </div>
+                  </div>
+                {%- endif -%}
+              </th>
+              <td class="order-table__price">
+                <span>{{ line_item.original_price | money }}</span>
+              </td>
+              <td class="order-table__quantity">
+                <span>{{ line_item.quantity }}</span>
+              </td>
+              <td class="order-table__line-price">
+                <span>{{ line_item.original_line_price | money }}</span>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="account__details">
+      <h3>Billing Address</h3>
+      <p><strong>Payment Status:</strong> {{ order.financial_status_label }}</p>
+      {{ order.billing_address | format_address }}
+
+      <h3>Shipping Address</h3>
+      <p><strong>Fulfillment Status:</strong> {{ order.fulfillment_status_label }}</p>
+      {{ order.shipping_address | format_address }}
+    </div>
+  </div>
+</section>

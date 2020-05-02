@@ -1,4 +1,17 @@
 .account {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  table {
+    th {
+      text-align: left;
+    }
+  }
+
   &__heading {
     margin-bottom: 20px;
   }
@@ -6,13 +19,9 @@
   &__details {
     display: flex;
     flex-direction: column;
-
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-    }
   }
 
-  &__orders {
+  &__orders, &__order-history {
     flex: 1;
     margin-bottom: 20px;
   }
