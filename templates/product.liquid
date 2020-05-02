@@ -46,16 +46,22 @@
   </div>
   <div class="container product__meta">
     <div class="container__item--flex meta">
-      <h4>Brand</h4>
-      <span>{{ product.metafields.printful.brand }}</span>
+      {% if product.metafields.printful.brand %}
+        <h4>Brand</h4>
+        <span>{{ product.metafields.printful.brand }}</span>
+      {% endif %}
     </div>
     <div class="container__item--flex meta">
-      <h4>Stocked in</h4>
-      <span>{% assign stocked_in = product.metafields.printful.stocked_in %}{{ stocked_in.countries | join: ' &bull; ' }}</span>
+      {% if product.metafields.printful.stocked_in %}
+        <h4>Stocked in</h4>
+        <span>{% assign stocked_in = product.metafields.printful.stocked_in %}{{ stocked_in.countries | join: ' &bull; ' }}</span>
+      {% endif %}
     </div>
     <div class="container__item--flex meta">
-      <h4>Fulfillment time</h4>
-      <span>{% assign times = product.metafields.printful.fulfillment_time %}{{ times.low }}-{{ times.high }} business days</span>
+      {% if product.metafields.printful.fulfillment_time %}
+        <h4>Fulfillment time</h4>
+        <span>{% assign times = product.metafields.printful.fulfillment_time %}{{ times.low }}-{{ times.high }} business days</span>
+      {% endif %}
     </div>
     <div class="container__item--flex">
       <div class="profile">
