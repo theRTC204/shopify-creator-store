@@ -1,11 +1,10 @@
 {% section 'hero' %}
 <section class="main">
-  <div class="product-grid">
-    {% for product in collections.frontpage.products limit:4 %}
-      {% include 'product-grid-item' with product %}
-    {% else %}
-      {% include 'collection-empty' %}
+  <div class="collection-grid">
+    {% for collection in collections %}
+      {% unless collection.handle == 'frontpage' %}
+        {% include 'collection-grid-item' with collection %}
+      {% endunless %}
     {% endfor %}
   </div>
 </section>
-  
