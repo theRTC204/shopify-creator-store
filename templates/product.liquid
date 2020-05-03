@@ -71,7 +71,9 @@
         <div class="profile__details">
           <div class="profile__name">
             <span>{{ settings.creator_name }}</span>
+            {%- if settings.is_partner == 'yes' -%}
             <img src="{{ 'verified-badge.svg' | asset_url }}" alt="Verified User" />
+            {%- endif -%}
           </div>
           <div class="profile__stats">
             {% if collection.url %}

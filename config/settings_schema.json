@@ -83,6 +83,22 @@
         "type": "text",
         "id": "creator_name",
         "label": "Twitch username"
+      },
+      {
+        "type": "radio",
+        "id": "is_partner",
+        "label": "Show Partner badge?",
+        "default": "no",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Yes"
+          },
+          {
+            "value": "no",
+            "label": "No"
+          }
+        ]
       }
     ]
   }
