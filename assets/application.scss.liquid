@@ -71,6 +71,21 @@ a {
   flex: 1;
 }
 
+.flex__spacer {
+  flex: 1;
+}
+
+.main {
+  margin: 120px 0 40px 0;
+  padding: 10px 10px;
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    margin: 20px 0;
+    padding: 60px 100px;
+  }
+}
+
 .section-header {
   margin-bottom: 20px;
 }
@@ -170,6 +185,24 @@ a {
   justify-content: center;
 }
 
+.collection--empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.collection--empty span {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #463D6D;
+}
+
 .customer__form {
   display: flex;
   flex-direction: column;
@@ -181,6 +214,17 @@ a {
 .customer__register {
   font-size: 14px;
   text-align: center;
+}
+
+form#create_customer, form#customer_login {
+  padding: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+@media screen and (min-width: 1440px) {
+  form#create_customer, form#customer_login {
+    padding: 0;
+  }
 }
 
 .header__nav {
@@ -226,6 +270,17 @@ a {
   border-radius: 20px;
   background-color: #8C52DE;
   display: flex;
+}
+
+.hero__banner {
+  width: 100%;
+  padding-top: 21.96%;
+}
+@media screen and (min-width: 1440px) {
+  .hero__banner {
+    height: 300px;
+    padding-top: 0;
+  }
 }
 
 .profile {
@@ -608,60 +663,4 @@ label {
 }
 label:after {
   content: ":";
-}
-
-.flex__spacer {
-  flex: 1;
-}
-
-form#create_customer, form#customer_login {
-  padding: 10px;
-  max-width: 500px;
-  margin: auto;
-}
-@media screen and (min-width: 1440px) {
-  form#create_customer, form#customer_login {
-    padding: 0;
-  }
-}
-
-.hero__banner {
-  width: 100%;
-  padding-top: 21.96%;
-}
-
-@media screen and (min-width: 1440px) {
-  .hero__banner {
-    height: 300px;
-    padding-top: 0;
-  }
-}
-.main {
-  margin: 120px 0 40px 0;
-  padding: 10px 10px;
-}
-
-@media screen and (min-width: 1024px) {
-  .main {
-    margin: 20px 0;
-    padding: 60px 100px;
-  }
-}
-.collection--empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 400px;
-  -webkit-user-select: none;
-          user-select: none;
-}
-
-.collection--empty span {
-  margin-top: 20px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #463D6D;
 }

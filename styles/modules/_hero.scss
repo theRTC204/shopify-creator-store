@@ -1,0 +1,11 @@
+.hero {
+  &__banner {
+    width: 100%;
+    padding-top: 21.96%;
+
+    @media screen and (min-width: 1440px) {
+      height: 300px;
+      padding-top: 0;
+    }
+  }
+}
