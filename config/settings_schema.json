@@ -61,6 +61,30 @@
             "label": "Contain"
           }
         ]
+      },
+      {
+        "type": "header",
+        "content": "Experimental features",
+        "info": "These features are still in development and may not function as intended."
+      },
+      {
+        "type": "radio",
+        "id": "channel_stats",
+        "label": {
+          "en": "Channel Stats"
+        },
+        "info": "Display your channel stats below your username.",
+        "default": "no",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Yes"
+          },
+          {
+            "value": "no",
+            "label": "No"
+          }
+        ]
       }
     ]
   },
