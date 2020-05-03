@@ -6,5 +6,62 @@
     "theme_author": "Ryan Carbotte",
     "theme_documentation_url": "https://github.com/theRTC204/shopify-creator-store",
     "theme_support_url": "https://github.com/theRTC204/shopify-creator-store/issues"
+  },
+  {
+    "name": "Page header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Banner settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": {
+          "en": "Image"
+        },
+        "info": "Recommended: 1366x300 pixels"
+      },
+      {
+        "type": "select",
+        "id": "banner_position",
+        "label": {
+          "en": "Position"
+        },
+        "default": "center",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "banner_size",
+        "label": {
+          "en": "Fitment"
+        },
+        "default": "cover",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ]
+      }
+    ]
   }
 ]

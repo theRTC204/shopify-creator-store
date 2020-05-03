@@ -1,5 +1,5 @@
 <section class="hero">
-  <div class="hero__banner" style="background-image: url(https://static-cdn.jtvnw.net/jtv_user_pictures/ecc995c6-71fa-4f41-a499-c4215aeb622b-profile_banner-480.png);"></div>
+  <div class="hero__banner" style="background-image: url({{ settings.banner_image | img_url: '1366x' }}); background-position: {{ settings.banner_position }}; background-size: {{ settings.banner_size }};"></div>
   <div class="profile">
     <div class="profile__avatar">
       <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/8079a92f-c2b1-4ec8-9a2d-97391f50201c-profile_image-300x300.png" alt="darkosto" />
