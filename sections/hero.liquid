@@ -12,8 +12,10 @@
         {%- endif -%}
       </div>
       <div class="profile__stats">
-        <span>69,915 followers</span>
-        <span>5,870,824 views</span>
+        {% assign followers = shop.metafields.creator_store.followers %}
+        {% assign views = shop.metafields.creator_store.views %}
+        <span>{%- if followers -%}{{ followers | times: 100 | money_without_currency | remove: '.00' }} followers{%- endif -%}</span>
+        <span>{%- if views -%}{{ views | times: 100 | money_without_currency | remove: '.00' }} views{%- endif -%}</span>
       </div>
     </div>
   </div>
