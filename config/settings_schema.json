@@ -63,5 +63,27 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Creator profile",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Profile settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "profile_image",
+        "label": {
+          "en": "Image"
+        },
+        "info": "Recommended: 300x300 pixels"
+      },
+      {
+        "type": "text",
+        "id": "creator_name",
+        "label": "Twitch username"
+      }
+    ]
   }
 ]

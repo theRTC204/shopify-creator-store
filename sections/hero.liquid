@@ -2,11 +2,11 @@
   <div class="hero__banner" style="background-image: url({{ settings.banner_image | img_url: '1366x' }}); background-position: {{ settings.banner_position }}; background-size: {{ settings.banner_size }};"></div>
   <div class="profile">
     <div class="profile__avatar">
-      <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/8079a92f-c2b1-4ec8-9a2d-97391f50201c-profile_image-300x300.png" alt="darkosto" />
+      <img src="{{ settings.profile_image | img_url: '150x' }}" alt="{{ settings.creator_name }}" />
     </div>
     <div class="profile__details">
       <div class="profile__name">
-        <span>darkosto</span>
+        <span>{{ settings.creator_name }}</span>
         <img src="{{ 'verified-badge.svg' | asset_url }}" alt="Verified User" />
       </div>
       <div class="profile__stats">
